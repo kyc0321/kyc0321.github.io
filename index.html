@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Academic profile of Kuan-Yu Chu, DDS, MHA, PhD — geriatric oral medicine specialist and epidemiology researcher.">
+<title>Kuan-Yu Chu, DDS, PhD</title>
+<style>
+  :root {
+    --bg: #f4f5f2;
+    --surface: #ffffff;
+    --ink: #1c2321;
+    --ink-muted: #4a534f;
+    --ink-faint: #77817c;
+    --accent: #2f6e6a;
+    --accent-soft: #e4edeb;
+    --brass: #9c7a35;
+    --rule: #d8dbd6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14181a;
+      --surface: #1b2022;
+      --ink: #e8e6e1;
+      --ink-muted: #b7bdb9;
+      --ink-faint: #8b938e;
+      --accent: #5fa8a3;
+      --accent-soft: #21302e;
+      --brass: #c9a15c;
+      --rule: #2a302d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14181a;
+    --surface: #1b2022;
+    --ink: #e8e6e1;
+    --ink-muted: #b7bdb9;
+    --ink-faint: #8b938e;
+    --accent: #5fa8a3;
+    --accent-soft: #21302e;
+    --brass: #c9a15c;
+    --rule: #2a302d;
+  }
+
+  * { box-sizing: border-box; }
+
+  @font-face {
+    font-family: "Source Serif Display";
+    src: local("Source Serif 4"), local("Georgia");
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    padding: 4.5rem 1.5rem 6rem;
+  }
+
+  .sheet { max-width: 41rem; margin: 0 auto; }
+
+  h1, h2, .display {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    text-wrap: balance;
+  }
+
+  header.masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 2.75rem;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--brass);
+    font-weight: 600;
+  }
+
+  h1.name {
+    font-size: 2.35rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .credentials {
+    font-size: 1.02rem;
+    color: var(--ink-muted);
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.4rem;
+    font-size: 0.92rem;
+    color: var(--ink-faint);
+    margin-top: 0.35rem;
+  }
+
+  .meta-row a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+  .meta-row a:hover, .meta-row a:focus-visible { border-bottom-color: var(--accent); }
+
+  .lede {
+    margin-top: 0.9rem;
+    font-size: 1.04rem;
+    color: var(--ink);
+    max-width: 38rem;
+    line-height: 1.7;
+  }
+
+  section { margin-bottom: 2.75rem; }
+
+  section > h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    font-size: 1.28rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 1.1rem;
+  }
+
+  section > h2::before {
+    content: "";
+    width: 0.85rem;
+    height: 2px;
+    background: var(--brass);
+    display: inline-block;
+    transform: translateY(-0.35rem);
+  }
+
+  ul.entries { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.95rem; }
+  ul.entries li { border-left: 2px solid var(--accent-soft); padding-left: 1rem; }
+  ul.entries li .org { color: var(--ink); font-weight: 500; }
+  ul.entries li .span {
+    display: block; font-size: 0.88rem; color: var(--ink-faint);
+    font-variant-numeric: tabular-nums; margin-top: 0.15rem;
+  }
+
+  .specialty-line { font-size: 1.05rem; color: var(--ink); }
+
+  .research-item { margin-bottom: 1.3rem; }
+  .research-item:last-of-type { margin-bottom: 0.6rem; }
+  .research-item h3 { font-size: 1rem; font-weight: 600; color: var(--accent); margin: 0 0 0.35rem; }
+  .research-item p { margin: 0; color: var(--ink-muted); max-width: 38rem; }
+
+  .synthesis {
+    margin-top: 1.5rem; padding-top: 1.3rem; border-top: 1px dashed var(--rule);
+    color: var(--ink-muted); font-style: italic; max-width: 38rem;
+  }
+
+  .pub-toggle-note { font-size: 0.85rem; color: var(--ink-faint); margin-bottom: 1rem; }
+
+  ol.pubs { list-style: none; counter-reset: pub; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.1rem; }
+  ol.pubs li { counter-increment: pub; position: relative; padding-left: 2.1rem; font-size: 0.97rem; color: var(--ink); }
+  ol.pubs li::before {
+    content: counter(pub); position: absolute; left: 0; top: 0.05rem;
+    font-variant-numeric: tabular-nums; font-size: 0.82rem; color: var(--brass);
+    border: 1px solid var(--accent-soft); width: 1.5rem; height: 1.5rem; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  ol.pubs li em { font-style: italic; color: var(--ink-muted); }
+  ol.pubs li .doi { display: block; font-size: 0.84rem; color: var(--ink-faint); margin-top: 0.2rem; }
+
+  .tag {
+    display: inline-block; font-size: 0.72rem; letter-spacing: 0.04em; color: var(--brass);
+    border: 1px solid var(--brass); border-radius: 999px; padding: 0.05rem 0.55rem;
+    margin-left: 0.5rem; vertical-align: middle;
+  }
+
+  footer.note {
+    font-size: 0.82rem; color: var(--ink-faint); border-top: 1px solid var(--rule);
+    padding-top: 1.3rem; max-width: 38rem;
+  }
+
+  @media (max-width: 30rem) {
+    body { padding: 3rem 1.15rem 4rem; }
+    h1.name { font-size: 1.85rem; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <span class="eyebrow">Academic Profile</span>
+    <h1 class="name">Kuan-Yu Chu</h1>
+    <div class="credentials">DDS · MHA · PhD (Epidemiology, National Yang Ming Chiao Tung University)</div>
+    <div class="meta-row">
+      <span>Department of Oral Medicine, Taipei City Hospital, Renai Branch</span>
+      <a href="https://orcid.org/0000-0003-0574-4220" target="_blank" rel="noopener">ORCID 0000-0003-0574-4220</a>
+    </div>
+    <p class="lede">Geriatric oral medicine specialist and epidemiology researcher whose work spans clinical dentistry, hospital administration, and population-based health data analysis, in support of evidence-based, integrated oral and systemic health care for older adults.</p>
+  </header>
+
+  <section>
+    <h2>Education</h2>
+    <ul class="entries">
+      <li><span class="org">PhD, Institute of Public Health (Epidemiology Track), National Yang Ming Chiao Tung University</span><span class="span">Sep 2005 – Nov 2010</span></li>
+      <li><span class="org">MA, Institute of Fine Arts and Cultural Creativity, Huafan University</span><span class="span">Sep 2015 – Jun 2018</span></li>
+      <li><span class="org">MS, West China School of Stomatology, Sichuan University</span><span class="span">Nov 2003 – Jun 2006</span></li>
+      <li><span class="org">MHA, Institute of Hospital and Health Care Administration, National Yang Ming Chiao Tung University</span><span class="span">Sep 1992 – Jun 1994</span></li>
+      <li><span class="org">DDS, School of Dentistry, Chung Shan Medical University</span><span class="span">Oct 1984 – Jun 1990</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Areas of Expertise</h2>
+    <p class="specialty-line">Epidemiology · Health Services Administration · Oral Medicine</p>
+  </section>
+
+  <section>
+    <h2>Licenses &amp; Certifications</h2>
+    <ul class="entries">
+      <li><span class="org">MOE-Certified Assistant Professor</span><span class="span">Cert. No. 140321, effective Oct 1, 2014</span></li>
+      <li><span class="org">Fellow, International College of Dentists (FICD)</span></li>
+      <li><span class="org">Specialist, Taiwan Academy of Geriatric Dentistry</span></li>
+      <li><span class="org">Specialist, Taiwan Association of Long-Term Care Medicine</span></li>
+      <li><span class="org">MOE-Certified Family Dentistry Specialist</span></li>
+      <li><span class="org">MOE-Certified Special Needs Dentistry Specialist</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+    <ul class="entries">
+      <li><span class="org">Attending Physician, Department of Oral Medicine, Taipei City Hospital, Renai Branch</span><span class="span">Jan 2019 – Jul 2025</span></li>
+      <li><span class="org">Director, Dentistry / Deputy Director, Quality Center, Taoyuan Hospital, Ministry of Health and Welfare</span><span class="span">Oct 2011 – Jan 2019</span></li>
+      <li><span class="org">Attending Physician / Secretary-General, Medical Quality Committee, New Taipei Municipal Hospital</span><span class="span">May 2008 – Sep 2011</span></li>
+      <li><span class="org">Director, Dentistry, Chutung Veterans Hospital, Veterans Affairs Council</span><span class="span">Aug 2007 – Apr 2008</span></li>
+      <li><span class="org">Attending Physician / Advisor, BSC Implementation Committee, Yuli Hospital, Department of Health</span><span class="span">Jan 2005 – Jul 2007</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Teaching Experience</h2>
+    <ul class="entries">
+      <li><span class="org">MacKay Medicine, Nursing and Management College — Health and Nursing / AI Applications</span><span class="span">Feb 2024 – Jan 2026</span></li>
+      <li><span class="org">University of Taipei — Disease and Logical Thinking</span><span class="span">Feb 2020 – Jul 2023</span></li>
+      <li><span class="org">Yuan Ze University — Basic Epidemiology / Introduction to Public Health</span><span class="span">Feb 2016 – Jul 2019</span></li>
+      <li><span class="org">Minghsin University of Science and Technology — Geriatric Psychology / Institutional Planning and Management</span><span class="span">Feb 2013 – Jan 2015</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Research Directions</h2>
+
+    <div class="research-item">
+      <h3>1. Population-based epidemiology of oral health and systemic disease</h3>
+      <p>Using nationally representative NHANES survey data to investigate the interaction and shared comorbidity mechanisms between periodontitis and age-related conditions such as osteoporosis and Alzheimer's disease, with a focus on cross-system health associations in older populations — consistent with a specialist background in geriatric oral medicine and long-term care medicine.</p>
+    </div>
+    <div class="research-item">
+      <h3>2. Competing-risk survival methodology in cancer registry research</h3>
+      <p>Developing and applying competing-risk survival models (Fine-Gray subdistribution hazard, landmark analysis) to the SEER cancer registry, comparing early-onset and late-onset prognosis across oral, head and neck, and other malignancies, with an emphasis on reproducible analytic frameworks.</p>
+    </div>
+    <div class="research-item">
+      <h3>3. Mendelian randomization and genetic epidemiology</h3>
+      <p>Applying two-sample Mendelian randomization to test causal-inference evidence linking exposures such as gut microbiota and periodontitis to neurodegenerative conditions including Alzheimer's disease, with analysis code and data publicly archived (GitHub/Zenodo) in line with open-science practice.</p>
+    </div>
+    <div class="research-item">
+      <h3>4. Dental health policy and health services administration</h3>
+      <p>Drawing on a health administration background and clinical dental administration experience to compare dental care reimbursement policy between Taiwan and OECD countries, published in <em>BMJ Open</em> with an accompanying open dataset on OSF; ongoing interest in medication safety in geriatric dental practice and quality management in institutional care.</p>
+    </div>
+
+    <p class="synthesis">This research integrates epidemiological methodology — competing-risk survival analysis, Mendelian randomization, and secondary analysis of large population databases — with clinical dental expertise in geriatric oral medicine, family dentistry, and special needs dentistry, in support of evidence-based, integrated oral and systemic health policy for older adults.</p>
+  </section>
+
+  <section>
+    <h2>Selected Publications<span class="tag">2019 – 2026</span></h2>
+    <p class="pub-toggle-note">Restricted to formally published or accepted SCI-indexed papers, cross-checked against PubMed.</p>
+    <ol class="pubs">
+      <li>Chu K-Y. Access to denture restoration services under removable dentures subsidy program for adults aged 65 years and older in Taiwan — an interpretive approach. <em>BMC Health Services Research</em>. 2022;22(1):90.<span class="doi">doi:10.1186/s12913-022-07504-6 · Representative work</span></li>
+      <li>Chu K-Y. Dental Restoration Considerations for Frail and Functionally Dependent Community-Dwelling Older Adults. <em>Int J Gerontol</em>. 2025;19(1):11-15.<span class="doi">doi:10.6890/IJGE.202501_19(1).0002</span></li>
+      <li>Chu K-Y. Polypharmacy and Drug Safety in Geriatric Dental Practice: A Comprehensive Evidence-Based Review. <em>OAJ Gerontol &amp; Geriatric Med</em>. 2025;9(1):555755.<span class="doi">doi:10.19080/OAJGGM.2025.09.555755</span></li>
+      <li>Chu K-Y. Mitochondrial DNA A3243G variant: Current perspectives and clinical implications. <em>Intractable &amp; Rare Diseases Research</em>. 2025.<span class="doi">doi:10.5582/irdr.2025.01051</span></li>
+      <li>Chu K-Y. Chinese calligraphy as cultural mediation: a cultural-historical activity theory perspective on therapeutic practice for neuropsychiatric symptoms. <em>Front Psychiatry</em>. 2025;16:1686995.<span class="doi">doi:10.3389/fpsyt.2025.1686995</span></li>
+      <li>Chu K-Y. Decades of dental care evolution: a cross-national comparative study on public dental expenditures and policy shifts in Taiwan and OECD Countries (2010–2025). <em>BMJ Open</em>. 2026;16:e119013.<span class="doi">doi:10.1136/bmjopen-2026-119013</span></li>
+      <li>Chu K-Y, Huang C-Y, Ouyang W-C. Does Chinese calligraphy therapy reduce neuropsychiatric symptoms: a systematic review and meta-analysis. <em>BMC Psychiatry</em>. 2018;18(1):62.<span class="doi">doi:10.1186/s12888-018-1611-4</span></li>
+    </ol>
+  </section>
+
+  <footer class="note">
+    This page is a summary academic profile prepared for faculty and editorial board applications. A complete record of publications and research materials is maintained separately. Last updated: September 2026.
+  </footer>
+
+</div>
+</body>
+</html>
